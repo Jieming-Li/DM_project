@@ -1,0 +1,2 @@
+# Archived benchmark v1.0.0 pins, including matplotlib. No ML framework needed.
+-r external/hallthruster-surrogate-benchmark/requirements.txt

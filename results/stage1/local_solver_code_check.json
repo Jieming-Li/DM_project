@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "evidence_type": "synthetic numerical code check, not benchmark evidence",
+  "affine_intercept_max_absolute_error": 5.329070518200751e-15,
+  "weighted_design_condition_number": 2.444031385934741,
+  "affine_ridge": 0,
+  "constant_intercept_with_large_ridge": "passed",
+  "duplicate_zero_distance_paths_for_both_methods": "passed"
+}

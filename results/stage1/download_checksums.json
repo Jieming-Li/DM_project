@@ -1,0 +1,42 @@
+[
+  {
+    "path": "data/extrapolation_pools/extrap_pool_D3_2400.h5",
+    "release_filename": "extrap_pool_D3_2400.h5",
+    "url": "https://zenodo.org/api/records/21986782/files/extrap_pool_D3_2400.h5/content",
+    "bytes": 231067860,
+    "checksum": "md5:2e0c5f31fb908a905afb11371be6c502",
+    "verified": true
+  },
+  {
+    "path": "data/extrapolation_pools/extrap_pool_D4_2400.h5",
+    "release_filename": "extrap_pool_D4_2400.h5",
+    "url": "https://zenodo.org/api/records/21986782/files/extrap_pool_D4_2400.h5/content",
+    "bytes": 230987837,
+    "checksum": "md5:8f5f86cd2d9d6e0703068f02f39e3d32",
+    "verified": true
+  },
+  {
+    "path": "data/RELEASE_README.md",
+    "release_filename": "README.md",
+    "url": "https://zenodo.org/api/records/21986782/files/README.md/content",
+    "bytes": 10442,
+    "checksum": "md5:a5d39bf96246f4a7f83db4bdb3bdecfb",
+    "verified": true
+  },
+  {
+    "path": "data/core/spt100_gbohm_12k_nc3_s42_20260617.h5",
+    "release_filename": "spt100_gbohm_12k_nc3_s42_20260617.h5",
+    "url": "https://zenodo.org/api/records/21986782/files/spt100_gbohm_12k_nc3_s42_20260617.h5/content",
+    "bytes": 1155797911,
+    "checksum": "md5:fe73484820de9af46934abf8a01911e6",
+    "verified": true
+  },
+  {
+    "path": "data/partitions_manifest.h5",
+    "release_filename": "partitions_manifest.h5",
+    "url": "https://zenodo.org/api/records/21986782/files/partitions_manifest.h5/content",
+    "bytes": 91375956,
+    "checksum": "md5:c305f0039230ed63eefaa518489ccfbc",
+    "verified": true
+  }
+]

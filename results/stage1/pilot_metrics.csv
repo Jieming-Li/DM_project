@@ -1,0 +1,3 @@
+method,evidence,field,n_train,n_validation,seed,k,ridge_lambda,mean_relative_l2_percent,median_relative_l2_percent,prediction_seconds_total,prediction_ms_per_run,shared_fit_seconds
+knn,preliminary validation / implementation check,potential,2000,200,42,32,0.0,3.9790031401059403,3.3691492600884643,0.0041568589804228395,0.020784294902114198,0.0019096560135949403
+local_linear,preliminary validation / implementation check,potential,2000,200,42,32,0.001,1.37585299836826,1.0012366879706258,0.019211147009627894,0.09605573504813947,0.0019096560135949403

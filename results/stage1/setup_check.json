@@ -1,0 +1,511 @@
+{
+  "project_root": "/home/jimmy/Desktop/DM_project",
+  "passed": true,
+  "failures": [],
+  "warnings": [],
+  "units": {
+    "V_a": "V",
+    "mdot": "kg/s",
+    "P_b": "Torr",
+    "B_hat": "dimensionless",
+    "z": "m",
+    "ne": "m^-3",
+    "Tev": "eV",
+    "potential": "V",
+    "ui": "m/s",
+    "nn": "m^-3",
+    "E": "V/m"
+  },
+  "units_source": "data/RELEASE_README.md; archived benchmark README, score.py and dataset_generation/run_sweep.py",
+  "fields": [
+    "ne",
+    "Tev",
+    "potential",
+    "ui",
+    "nn"
+  ],
+  "input_order": [
+    "V_a",
+    "mdot",
+    "P_b",
+    "B_hat"
+  ],
+  "files": {
+    "core/spt100_gbohm_12k_nc3_s42_20260617.h5": {
+      "readable": true,
+      "run_count": 12000,
+      "problems": [],
+      "diagnostic_values": {
+        "retcode": {
+          "success": 12000
+        }
+      },
+      "grid_consistent": true,
+      "all_scored_profiles_finite": true,
+      "input_shape": [
+        4
+      ],
+      "output_shape": [
+        5,
+        202
+      ],
+      "stored_ui_shape": [
+        3,
+        202
+      ],
+      "file_attributes": {
+        "bounds_lower": [
+          200.0,
+          3e-06,
+          0.0,
+          0.85
+        ],
+        "bounds_upper": [
+          500.0,
+          7e-06,
+          0.0001,
+          1.15
+        ],
+        "dataset_name": "spt100_gbohm_12k_nc3_s42_20260617",
+        "dim_names": [
+          "V_a",
+          "mdot",
+          "P_b",
+          "B_hat"
+        ],
+        "generator": "HallThruster.jl v0.18.7 simulation pipeline",
+        "n_samples": 12000,
+        "seed": 42,
+        "zenodo_role": "core"
+      },
+      "numeric_attribute_ranges": {
+        "B_hat": [
+          0.8500000623725178,
+          1.149982111400072
+        ],
+        "P_b": [
+          5.278914462148712e-09,
+          9.999199847787244e-05
+        ],
+        "V_a": [
+          200.01818688922603,
+          499.9977736818903
+        ],
+        "anode_eff": [
+          0.2715105215052364,
+          0.6287377682872908
+        ],
+        "current_eff": [
+          0.4503665168977125,
+          0.906776110552432
+        ],
+        "discharge_current": [
+          1.6237539549005378,
+          13.581959755377717
+        ],
+        "divergence_eff": [
+          0.8658199449720806,
+          0.9826720363488518
+        ],
+        "ion_current": [
+          1.4427462580156079,
+          6.189177317221712
+        ],
+        "mass_eff": [
+          0.6224438513986292,
+          1.0855946584862106
+        ],
+        "mdot": [
+          3.000228980666031e-06,
+          6.999864398274124e-06
+        ],
+        "thrust": [
+          0.02359022018439362,
+          0.18862621744420582
+        ],
+        "voltage_eff": [
+          0.492846064366676,
+          0.9106285817673102
+        ],
+        "wall_s": [
+          14.933737800000017,
+          34.882410099999106
+        ]
+      }
+    },
+    "extrapolation_pools/extrap_pool_D3_2400.h5": {
+      "readable": true,
+      "run_count": 2400,
+      "problems": [],
+      "diagnostic_values": {
+        "retcode": {
+          "success": 2400
+        }
+      },
+      "grid_consistent": true,
+      "all_scored_profiles_finite": true,
+      "input_shape": [
+        4
+      ],
+      "output_shape": [
+        5,
+        202
+      ],
+      "stored_ui_shape": [
+        3,
+        202
+      ],
+      "file_attributes": {
+        "bounds_lower": [
+          200.0,
+          3e-06,
+          0.0,
+          0.85
+        ],
+        "bounds_upper": [
+          500.0,
+          7e-06,
+          1e-05,
+          1.15
+        ],
+        "dataset_name": "spt100_pext_2400_s143_20260814",
+        "dim_names": [
+          "V_a",
+          "mdot",
+          "P_b",
+          "B_hat"
+        ],
+        "generator": "HallThruster.jl v0.18.7 simulation pipeline",
+        "n_samples": 2400,
+        "seed": 143,
+        "zenodo_role": "extrapolation_pools"
+      },
+      "numeric_attribute_ranges": {
+        "B_hat": [
+          0.8500854277612356,
+          1.1499515133077811
+        ],
+        "P_b": [
+          3.3217329275126277e-09,
+          9.999207141318087e-06
+        ],
+        "V_a": [
+          200.08879351544172,
+          499.8824772551287
+        ],
+        "anode_eff": [
+          0.31299987593856005,
+          0.6593712474244989
+        ],
+        "current_eff": [
+          0.6363401787647158,
+          0.8749423396380195
+        ],
+        "discharge_current": [
+          1.8852809021942305,
+          9.334277978734228
+        ],
+        "divergence_eff": [
+          0.9042279814770628,
+          0.9833426637680192
+        ],
+        "ion_current": [
+          1.6403874401371723,
+          6.046746867602672
+        ],
+        "mass_eff": [
+          0.7036795882927971,
+          1.1312734751143088
+        ],
+        "mdot": [
+          3.001345417976649e-06,
+          6.999873628600029e-06
+        ],
+        "thrust": [
+          0.02763945923821546,
+          0.1923835359309094
+        ],
+        "voltage_eff": [
+          0.4995595515221945,
+          0.8904263598779248
+        ],
+        "wall_s": [
+          15.074896199999785,
+          34.004360500002804
+        ]
+      }
+    },
+    "extrapolation_pools/extrap_pool_D4_2400.h5": {
+      "readable": true,
+      "run_count": 2400,
+      "problems": [],
+      "diagnostic_values": {
+        "retcode": {
+          "success": 2400
+        }
+      },
+      "grid_consistent": true,
+      "all_scored_profiles_finite": true,
+      "input_shape": [
+        4
+      ],
+      "output_shape": [
+        5,
+        202
+      ],
+      "stored_ui_shape": [
+        3,
+        202
+      ],
+      "file_attributes": {
+        "bounds_lower": [
+          200.0,
+          3e-06,
+          0.0,
+          1.15
+        ],
+        "bounds_upper": [
+          500.0,
+          7e-06,
+          0.0001,
+          1.3
+        ],
+        "dataset_name": "spt100_bext_2400_s142_20260814",
+        "dim_names": [
+          "V_a",
+          "mdot",
+          "P_b",
+          "B_hat"
+        ],
+        "generator": "HallThruster.jl v0.18.7 simulation pipeline",
+        "n_samples": 2400,
+        "seed": 142,
+        "zenodo_role": "extrapolation_pools"
+      },
+      "numeric_attribute_ranges": {
+        "B_hat": [
+          1.15000409432854,
+          1.2999594260261567
+        ],
+        "P_b": [
+          1.8627692880324897e-08,
+          9.995910676365568e-05
+        ],
+        "V_a": [
+          200.11807156242747,
+          499.9619332274551
+        ],
+        "anode_eff": [
+          0.24080990482886588,
+          0.6396780338632997
+        ],
+        "current_eff": [
+          0.5636991031163916,
+          0.906368084583174
+        ],
+        "discharge_current": [
+          1.3981277018909481,
+          10.087554511436098
+        ],
+        "divergence_eff": [
+          0.8827283234266722,
+          0.979926265726854
+        ],
+        "ion_current": [
+          1.267042027007319,
+          5.938847237372925
+        ],
+        "mass_eff": [
+          0.5432525539585897,
+          1.0811111021122337
+        ],
+        "mdot": [
+          3.0003071488258965e-06,
+          6.9986109350066955e-06
+        ],
+        "thrust": [
+          0.020967626495360256,
+          0.18103208454358868
+        ],
+        "voltage_eff": [
+          0.48581371278698127,
+          0.8733325556899234
+        ],
+        "wall_s": [
+          14.73688679999941,
+          42.79874470000141
+        ]
+      }
+    },
+    "partitions_manifest.h5": {
+      "readable": true,
+      "all_datasets_read": 9,
+      "root_keys": [
+        "canonical_partition_meta",
+        "canonical_partitions",
+        "realization_splits"
+      ],
+      "sample_datasets": [
+        {
+          "path": "canonical_partitions/partition",
+          "shape": [
+            69290
+          ],
+          "dtype": "object"
+        },
+        {
+          "path": "canonical_partitions/run_id",
+          "shape": [
+            69290
+          ],
+          "dtype": "int64"
+        },
+        {
+          "path": "canonical_partitions/source_dataset",
+          "shape": [
+            69290
+          ],
+          "dtype": "object"
+        },
+        {
+          "path": "canonical_partitions/split",
+          "shape": [
+            69290
+          ],
+          "dtype": "object"
+        },
+        {
+          "path": "realization_splits/partition",
+          "shape": [
+            693169
+          ],
+          "dtype": "object"
+        },
+        {
+          "path": "realization_splits/realization",
+          "shape": [
+            693169
+          ],
+          "dtype": "int64"
+        },
+        {
+          "path": "realization_splits/run_id",
+          "shape": [
+            693169
+          ],
+          "dtype": "int64"
+        },
+        {
+          "path": "realization_splits/source_dataset",
+          "shape": [
+            693169
+          ],
+          "dtype": "object"
+        },
+        {
+          "path": "realization_splits/split",
+          "shape": [
+            693169
+          ],
+          "dtype": "object"
+        }
+      ],
+      "used_for_D1_split": false
+    }
+  },
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "interpreter": "/home/jimmy/Desktop/DM_project/.venv/bin/python",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+  "dependencies": {
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "fonttools": "4.67.0",
+    "h5py": "3.16.0",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.3",
+    "packaging": "26.3",
+    "pandas": "3.0.1",
+    "pillow": "13.0.0",
+    "pip": "24.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "3.0.0",
+    "scipy": "1.17.1",
+    "setuptools": "79.0.1",
+    "six": "1.17.0",
+    "tzdata": "2026.5"
+  },
+  "benchmark_release": "1.0.0",
+  "official_code_unchanged": true,
+  "release_checksums": [
+    {
+      "path": "data/extrapolation_pools/extrap_pool_D3_2400.h5",
+      "release_filename": "extrap_pool_D3_2400.h5",
+      "url": "https://zenodo.org/api/records/21986782/files/extrap_pool_D3_2400.h5/content",
+      "bytes": 231067860,
+      "checksum": "md5:2e0c5f31fb908a905afb11371be6c502",
+      "verified": true
+    },
+    {
+      "path": "data/extrapolation_pools/extrap_pool_D4_2400.h5",
+      "release_filename": "extrap_pool_D4_2400.h5",
+      "url": "https://zenodo.org/api/records/21986782/files/extrap_pool_D4_2400.h5/content",
+      "bytes": 230987837,
+      "checksum": "md5:8f5f86cd2d9d6e0703068f02f39e3d32",
+      "verified": true
+    },
+    {
+      "path": "data/RELEASE_README.md",
+      "release_filename": "README.md",
+      "url": "https://zenodo.org/api/records/21986782/files/README.md/content",
+      "bytes": 10442,
+      "checksum": "md5:a5d39bf96246f4a7f83db4bdb3bdecfb",
+      "verified": true
+    },
+    {
+      "path": "data/core/spt100_gbohm_12k_nc3_s42_20260617.h5",
+      "release_filename": "spt100_gbohm_12k_nc3_s42_20260617.h5",
+      "url": "https://zenodo.org/api/records/21986782/files/spt100_gbohm_12k_nc3_s42_20260617.h5/content",
+      "bytes": 1155797911,
+      "checksum": "md5:fe73484820de9af46934abf8a01911e6",
+      "verified": true
+    },
+    {
+      "path": "data/partitions_manifest.h5",
+      "release_filename": "partitions_manifest.h5",
+      "url": "https://zenodo.org/api/records/21986782/files/partitions_manifest.h5/content",
+      "bytes": 91375956,
+      "checksum": "md5:c305f0039230ed63eefaa518489ccfbc",
+      "verified": true
+    }
+  ],
+  "manifests": {
+    "D1": {
+      "train": 9600,
+      "test": 1200,
+      "duplicate_keys": 0,
+      "train_test_overlap": 0,
+      "path": "external/hallthruster-surrogate-benchmark/benchmark/manifests/D1.csv"
+    },
+    "D5": {
+      "train": 10668,
+      "test": 1200,
+      "duplicate_keys": 0,
+      "train_test_overlap": 0,
+      "path": "external/hallthruster-surrogate-benchmark/benchmark/manifests/D5.csv"
+    }
+  },
+  "common_D1_D5_training_pool_count": 8542,
+  "missing_referenced_runs": [],
+  "spatial_grid": {
+    "shape": [
+      202
+    ],
+    "min_m": 0.0,
+    "max_m": 0.08,
+    "strictly_increasing": true,
+    "sha256_float64": "65c161e5a7bbf6cb963d4a1091db638525afe23d76a33ed5ba2e3cd984caae69",
+    "comparison": "exact equality across all simulation runs in all three files"
+  },
+  "elapsed_seconds": 27.802069537021453
+}

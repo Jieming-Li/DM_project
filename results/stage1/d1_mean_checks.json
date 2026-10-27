@@ -1,0 +1,11 @@
+{
+  "headline_error_percent": 35.907216109854346,
+  "meeting_error_above_35_percent": true,
+  "reference_headline_percent": 35.907,
+  "headline_difference_percentage_points": 0.00021610985434961094,
+  "reference_agreement_at_3_decimals": true,
+  "reference_tolerance_percentage_points": 0.0005,
+  "scorer_exit_status": 0,
+  "pilot_gate_passed": true,
+  "unresolved_discrepancy": null
+}

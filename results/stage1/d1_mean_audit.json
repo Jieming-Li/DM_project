@@ -1,0 +1,38 @@
+{
+  "training_shape": [
+    9600,
+    5,
+    202
+  ],
+  "mean_shape": [
+    5,
+    202
+  ],
+  "prediction_shape": [
+    1200,
+    5,
+    202
+  ],
+  "dtype": "float64",
+  "mean_axis": 0,
+  "training_rows_used": 9600,
+  "test_rows_predicted": 1200,
+  "units": "original physical units",
+  "transformations": [],
+  "fields": [
+    "ne",
+    "Tev",
+    "potential",
+    "ui",
+    "nn"
+  ],
+  "ids_dtype": "int64",
+  "loader_matches_official_at_training_positions": [
+    0,
+    4800,
+    9599
+  ],
+  "independent_fsum_check": true,
+  "prediction_roundtrip_matches_official": true,
+  "D1_manifest_sha256": "1c8a5b6c0d28b5cda5fffab13fee55ae61458843448dab2ab7778d55fa72f840"
+}

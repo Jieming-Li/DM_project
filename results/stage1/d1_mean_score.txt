@@ -1,0 +1,38 @@
+Command: /home/jimmy/Desktop/DM_project/.venv/bin/python -B benchmark/score.py --predictions /home/jimmy/Desktop/DM_project/results/stage1/d1_mean_predictions.npz --partition D1 --json-out /home/jimmy/Desktop/DM_project/results/stage1/d1_mean_score.json
+CWD: /home/jimmy/Desktop/DM_project/external/hallthruster-surrogate-benchmark
+HTSB_DATA_DIR: /home/jimmy/Desktop/DM_project/data
+Exit status: 0
+
+STDOUT
+Partition D1: 9600 training runs, 1200 test runs
+  test data comes from core/spt100_gbohm_12k_nc3_s42_20260617.h5
+
+D1, whole profile
+  test runs: 1200
+
+  field             mean    median  95th pct
+  ------------ --------- --------- ---------
+  ne             76.695%   57.860%  199.298%
+  Tev            30.673%   27.956%   61.411%
+  potential      25.977%   21.994%   62.760%
+  ui             17.810%   16.665%   37.974%
+  nn             28.381%   25.462%   60.114%
+
+  field average (the headline number): 35.907%
+
+D1, acceleration region only (19.8 to 29.4 mm, 25 of 202 grid points)
+  test runs: 1200
+
+  field             mean    median  95th pct
+  ------------ --------- --------- ---------
+  ne             66.622%   51.594%  180.438%
+  Tev            29.980%   24.188%   66.706%
+  potential      32.942%   24.944%   85.901%
+  ui             39.786%   23.954%  129.713%
+  nn             90.566%   59.624%  259.744%
+
+  field average (the headline number): 51.979%
+
+Wrote /home/jimmy/Desktop/DM_project/results/stage1/d1_mean_score.json
+
+STDERR

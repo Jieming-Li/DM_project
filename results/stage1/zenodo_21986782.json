@@ -1,0 +1,205 @@
+{
+  "created": "2026-08-18T04:36:05.010348+00:00",
+  "modified": "2026-09-14T20:47:34.395512+00:00",
+  "id": 21986782,
+  "conceptrecid": "21986781",
+  "doi": "10.5281/zenodo.21986782",
+  "conceptdoi": "10.5281/zenodo.21986781",
+  "doi_url": "https://doi.org/10.5281/zenodo.21986782",
+  "metadata": {
+    "title": "SPT-100 Hall Thruster Dataset for Machine Learning Surrogate Modeling (from HallThruster.jl v0.18.7): Simulation Data and Partitions",
+    "doi": "10.5281/zenodo.21986782",
+    "publication_date": "2026-08-18",
+    "description": "<h2 class=\"mt-3 -mb-1 text-[1.125rem] font-bold\">What this is</h2>\n<p class=\"font-claude-response-body break-words whitespace-normal\">This dataset comes from simulating a Hall thruster &mdash; a type of electric propulsion engine used on spacecraft &mdash; using a plasma physics simulator called HallThruster.jl (version 0.18.7). Instead of running a real thruster in a vacuum chamber every time we want data, we run the simulator, which solves the physics equations for how the plasma behaves inside the thruster channel. We used it to generate 12,000 simulation runs of a specific thruster design (the SPT-100), each one with slightly different settings for things like input voltage, propellant flow rate, and background pressure. The SPT-100 has been around for a while &mdash; it was developed by the Russian company Fakel and first flew on a satellite back in 1994, and since then it's become one of the most flown and most-studied Hall thrusters out there, which is part of why it's such a common choice for testing new simulation and modeling approaches like this one.</p>\n<p class=\"font-claude-response-body break-words whitespace-normal\">The bigger goal of the project is to train machine learning models (we call them \"surrogate models\") that can predict what the simulator would output, but almost instantly instead of taking real computation time. This dataset is what we used to train and test those models, so that others can build on the same simulation data and reproduce the kind of results we report.</p>\n<p class=\"font-claude-response-body break-words whitespace-normal\">This dataset was produced as part of a research project at the Data Mining Laboratory (DMLab), Georgia State University.</p>\n<h2 class=\"mt-3 -mb-1 text-[1.125rem] font-bold\">What's included</h2>\n<ul class=\"[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3 print:block print:space-y-1\">\n<li class=\"code-line\">The full set of 12,000 simulation runs (all converged, meaning the simulation successfully solved for every one)</li>\n<li class=\"code-line\">Two additional sampling pools used for the extrapolation tests &mdash; one at lower background pressures and one at higher magnetic field strengths &mdash; each drawn independently of the core set specifically for evaluating out-of-range prediction</li>\n<li class=\"code-line\">The exact lists of which runs belong to which test category (the data is split into 7 partitions &mdash; six designs, with the sparse-data one at two levels &mdash; to test different kinds of prediction difficulty: interpolation, sparse training data, extrapolation, and gaps in the middle of the sampled range)</li>\n</ul>\n<h2 class=\"mt-3 -mb-1 text-[1.125rem] font-bold\">Files</h2>\n<ul class=\"[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3 print:block print:space-y-1\">\n<li class=\"code-line\"><code>spt100_gbohm_12k_nc3_s42_20260617.h5</code>&nbsp;&mdash; the full 12,000-run core dataset</li>\n<li class=\"code-line\"><code>extrap_pool_D3_2400.h5</code>&nbsp;&mdash; sampling pool for the pressure-extrapolation test</li>\n<li class=\"code-line\"><code>extrap_pool_D4_2400.h5</code>&nbsp;&mdash; sampling pool for the magnetic-field-extrapolation test</li>\n<li class=\"code-line\"><code>partitions_manifest.h5</code>&nbsp;&mdash; the run-to-partition assignments (which runs belong to which test category, and train/test splits)</li>\n</ul>\n<h2 class=\"mt-3 -mb-1 text-[1.125rem] font-bold\">License</h2>\n<p class=\"font-claude-response-body break-words whitespace-normal\">This dataset is released under CC-BY-4.0, which means you're free to use it for research or other purposes as long as you credit us.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Angryk, Gabriella",
+        "affiliation": "Walton High School"
+      },
+      {
+        "name": "Bhattarai, Sukirti",
+        "affiliation": "Georgia State University"
+      }
+    ],
+    "keywords": [
+      "Hall thruster",
+      "SPT-100",
+      "surrogate model",
+      "HallThruster.jl",
+      "neural operator",
+      "electric propulsion",
+      "scientific machine learning",
+      "benchmark dataset",
+      "extrapolation",
+      "out-of-distribution generalization",
+      "DeepONet",
+      "simulation data"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/UM-PEPL/HallThruster.jl/releases/tag/v0.18.7",
+        "relation": "isCompiledBy",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://github.com/JANUS-Institute/HallThrusterPEM",
+        "relation": "isCompiledBy",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.21105/joss.04672",
+        "relation": "cites",
+        "resource_type": "publication-article",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.22758006",
+        "relation": "isSupplementedBy",
+        "resource_type": "software",
+        "scheme": "doi"
+      }
+    ],
+    "version": "1.0.0",
+    "language": "eng",
+    "custom": {
+      "code:programmingLanguage": [
+        {
+          "id": "python",
+          "title": {
+            "en": "Python"
+          }
+        }
+      ],
+      "code:developmentStatus": {
+        "id": "active",
+        "title": {
+          "en": "Active"
+        }
+      }
+    },
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "21986781"
+          }
+        }
+      ]
+    }
+  },
+  "title": "SPT-100 Hall Thruster Dataset for Machine Learning Surrogate Modeling (from HallThruster.jl v0.18.7): Simulation Data and Partitions",
+  "links": {
+    "self": "https://zenodo.org/api/records/21986782",
+    "self_html": "https://zenodo.org/records/21986782",
+    "preview_html": "https://zenodo.org/records/21986782?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.21986782",
+    "self_doi": "https://doi.org/10.5281/zenodo.21986782",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.21986782",
+    "reserve_doi": "https://zenodo.org/api/records/21986782/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/21986781",
+    "parent_html": "https://zenodo.org/records/21986781",
+    "parent_doi": "https://doi.org/10.5281/zenodo.21986781",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.21986781",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:21986782/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:21986782/sequence/default",
+    "files": "https://zenodo.org/api/records/21986782/files",
+    "media_files": "https://zenodo.org/api/records/21986782/media-files",
+    "latest": "https://zenodo.org/api/records/21986782/versions/latest",
+    "latest_html": "https://zenodo.org/records/21986782/latest",
+    "versions": "https://zenodo.org/api/records/21986782/versions",
+    "draft": "https://zenodo.org/api/records/21986782/draft",
+    "access_links": "https://zenodo.org/api/records/21986782/access/links",
+    "access_grants": "https://zenodo.org/api/records/21986782/access/grants",
+    "access_users": "https://zenodo.org/api/records/21986782/access/users",
+    "access_request": "https://zenodo.org/api/records/21986782/access/request",
+    "access": "https://zenodo.org/api/records/21986782/access",
+    "communities": "https://zenodo.org/api/records/21986782/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/21986782/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/21986782/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/21986782/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/21986782/quota-increase",
+    "requests": "https://zenodo.org/api/records/21986782/requests"
+  },
+  "updated": "2026-09-14T20:47:34.395512+00:00",
+  "recid": "21986782",
+  "revision": 6,
+  "files": [
+    {
+      "id": "fec17a97-0801-4e2d-937a-4c12a8372334",
+      "key": "extrap_pool_D3_2400.h5",
+      "size": 231067860,
+      "checksum": "md5:2e0c5f31fb908a905afb11371be6c502",
+      "links": {
+        "self": "https://zenodo.org/api/records/21986782/files/extrap_pool_D3_2400.h5/content"
+      }
+    },
+    {
+      "id": "742901e9-56b0-4e21-89e3-6a4f3d38a4d2",
+      "key": "extrap_pool_D4_2400.h5",
+      "size": 230987837,
+      "checksum": "md5:8f5f86cd2d9d6e0703068f02f39e3d32",
+      "links": {
+        "self": "https://zenodo.org/api/records/21986782/files/extrap_pool_D4_2400.h5/content"
+      }
+    },
+    {
+      "id": "9f36882a-0a15-4bcf-9ec3-80b6bacb94c4",
+      "key": "README.md",
+      "size": 10442,
+      "checksum": "md5:a5d39bf96246f4a7f83db4bdb3bdecfb",
+      "links": {
+        "self": "https://zenodo.org/api/records/21986782/files/README.md/content"
+      }
+    },
+    {
+      "id": "cc71c0de-8953-4ea3-8977-75f29c2bed63",
+      "key": "spt100_gbohm_12k_nc3_s42_20260617.h5",
+      "size": 1155797911,
+      "checksum": "md5:fe73484820de9af46934abf8a01911e6",
+      "links": {
+        "self": "https://zenodo.org/api/records/21986782/files/spt100_gbohm_12k_nc3_s42_20260617.h5/content"
+      }
+    },
+    {
+      "id": "6a167eab-88e3-4c04-afcd-fa1e7ea9c514",
+      "key": "partitions_manifest.h5",
+      "size": 91375956,
+      "checksum": "md5:c305f0039230ed63eefaa518489ccfbc",
+      "links": {
+        "self": "https://zenodo.org/api/records/21986782/files/partitions_manifest.h5/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1834049"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 41,
+    "unique_downloads": 29,
+    "views": 62,
+    "unique_views": 50,
+    "version_downloads": 41,
+    "version_unique_downloads": 29,
+    "version_unique_views": 50,
+    "version_views": 62
+  },
+  "state": "done",
+  "submitted": true
+}

@@ -1,0 +1,26 @@
+# Stage-one decisions
+
+Date: 2026-10-26 (America/New_York).
+
+- Confirmed canonical root `/home/jimmy/Desktop/DM_project` before writes. The directory was empty, had no symlinks, and was not inside another Git repository. All work and subprocess working directories stay inside it. Runtime checks include symlinks, local caches and Git metadata.
+- Found existing Python 3.11.15 at `/home/jimmy/miniconda3/envs/dl_project/bin/python`. Used it read-only to create `.venv` with copied executable and project-local package installation. No standalone Python or uv download was needed; no external environment was modified.
+- Selected the assignment's archived benchmark release 1.0.0 and verified its published MD5. Matched all source bytes to Git tag v1.0.0, commit `30d45b23b4fc444b95490a7d161d0f102da212e7`, rather than assuming current main was equivalent. Official scoring/metric files remain unchanged; file hashes are recorded.
+- Used the official requirements pins and SciPy cKDTree/NumPy for the pilot, avoiding an unnecessary additional ML dependency. Recorded successfully installed versions. No OS packages or global configuration changes.
+- Downloaded only the exact versioned dataset release files, plus its README. Files keep release-relative simulation paths; the HDF5 partition manifest is kept at `data/partitions_manifest.h5`, as requested. The release's illustrated `partitions/` subdirectory is not required by the scorer.
+- The fixed official D1 CSV, not a regenerated split or an HDF5 realization, supplies baseline keys. All joins retain `(source_dataset, run_id)`; integer IDs are used only at the official D1 scorer interface after single-source uniqueness checks.
+- The setup check examines every simulation run and reads every partition HDF5 dataset. Raw data is always opened read-only. Any invalid run is recorded as evidence and stops required calculation; no filtering is used.
+- Example-run selection is the minimum common D1/D5 training key, with D1-only fallback if that pool is empty. The same run supplies all five panels. Physical units and the channel exit are explicit.
+- Baseline is the arithmetic physical-unit float64 mean along the training-run axis over all 9,600 rows. Separate loader agreement, fixed-position fsum checks and official prediction roundtrip check the interface. The actual official CLI supplies scores and exit status.
+- Kept reference and measured errors separate. Reference agreement means rounding to the same three decimals (tolerance 0.0005 percentage points); error above 35% is a different check. Neither changes the predictions or scoring rules.
+- Pilot pool is exactly the D1-train/D5-train composite-key intersection. Seed 42 chooses 2,000 train plus 200 validation keys without replacement; both groups are sorted afterward. There is no overlap with either official test set. No targets from official final test rows are used to select or evaluate these models.
+- Pilot configuration is fixed in advance: k=32, Euclidean standardized inputs, normalized inverse-distance weights, local-linear slope ridge 0.001, unpenalized intercept. Standardization uses only pilot training inputs. Outputs stay in volts with no constraints or transformations.
+- For exact matches, both methods average zero-distance neighbors within the selected k and skip a ridge fit. This makes duplicate-match handling consistent. Weighted local regression uses augmented SVD least squares, not a matrix inverse.
+- The affine numerical code check uses asymmetric offsets so a simple weighted mean cannot accidentally pass as a regression solver. Also check constant-intercept preservation and both exact-match prediction paths.
+- Timing includes all query transforms, neighbor search and prediction/local fits, with single-thread numerical libraries. Shared tree/scaler fitting is separate. One timed call per method is sufficient for this implementation pilot; no hyperparameter search or timing suite.
+- Stage one excludes gap robustness claims, final D5 test evaluation, a large comparison, multiple seeds and neural training. Stage two will use D5 potential mean relative L2 as primary, D1 context and inference cost as secondary measures.
+
+Actual outcomes and remaining blockers are reported from generated evidence in `reports/stage1_summary.md` and `results/stage1/stage1_run.json`.
+
+Execution outcome: all required checks passed with zero problematic simulation runs; actual headline 35.907216109854346% agrees with the 35.907% reference and is above 35%. The pilot ran only after that gate passed: kNN mean potential error 3.9790031401059403%, local-linear 1.37585299836826%. No settings were changed after observing results. The fixed run-32 plot visibly shows an unconstrained local-linear overshoot; retained it and discussed that limitation.
+
+Local Git handoff: initialized the project repository only after confirming no enclosing repository and project-local metadata. Git user.email is configured but user.name is missing, so no identity was invented and no commit was attempted. The explicitly identified stage-one deliverables are staged for review; the user must supply their name and commit locally. No project remote was added or push performed.

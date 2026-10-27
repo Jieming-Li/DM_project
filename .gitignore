@@ -1,0 +1,13 @@
+.venv/
+.tools/
+.runtime/
+.tmp/
+.cache/
+data/
+external/
+__pycache__/
+*.py[cod]
+*.h5
+*.hdf5
+.DS_Store
+# Required stage-one prediction archives are retained (about 10 MB total).

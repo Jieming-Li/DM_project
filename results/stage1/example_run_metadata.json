@@ -1,0 +1,43 @@
+{
+  "source_dataset": "core/spt100_gbohm_12k_nc3_s42_20260617.h5",
+  "run_id": 0,
+  "selection_rule": "Minimum (source_dataset, integer run_id) in D1-train intersection D5-train; no appearance-based selection",
+  "in_D1_and_D5_training": true,
+  "inputs": {
+    "V_a": 319.1806510987861,
+    "mdot": 4.215853707186749e-06,
+    "P_b": 7.996784501733409e-05,
+    "B_hat": 0.8615575657992735
+  },
+  "units": {
+    "V_a": "V",
+    "mdot": "kg/s",
+    "P_b": "Torr",
+    "B_hat": "dimensionless",
+    "z": "m",
+    "ne": "m^-3",
+    "Tev": "eV",
+    "potential": "V",
+    "ui": "m/s",
+    "nn": "m^-3",
+    "E": "V/m"
+  },
+  "fields": [
+    "ne",
+    "Tev",
+    "potential",
+    "ui[0]",
+    "nn"
+  ],
+  "stored_ui_shape": [
+    3,
+    202
+  ],
+  "plotted_profile_shape": [
+    5,
+    202
+  ],
+  "axial_unit_in_figure": "mm",
+  "channel_exit_mm": 25,
+  "figure": "results/stage1/example_run.png"
+}

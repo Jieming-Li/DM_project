@@ -1,0 +1,43 @@
+{
+  "evidence": "preliminary validation / implementation check",
+  "pool_definition": "official D1 train intersection official D5 train, joined by (source_dataset, run_id)",
+  "pool_count": 8542,
+  "pool_order": "source_dataset lexicographic then integer run_id ascending",
+  "sample_rule": "numpy default_rng(42).permutation(pool size)[:2200]; first 2000 train, last 200 validation; sort each selected split by composite key",
+  "seed": 42,
+  "n_train": 2000,
+  "n_validation": 200,
+  "official_test_overlap": 0,
+  "input_standardization": "training-only per-feature mean and population std (ddof=0)",
+  "input_means": [
+    343.93060535516463,
+    4.959544836665233e-06,
+    5.0435354088899715e-05,
+    0.9995978818340464
+  ],
+  "input_scales": [
+    90.47983880153672,
+    1.164360437070724e-06,
+    3.0274400840170845e-05,
+    0.08727148046850944
+  ],
+  "k": 32,
+  "distance": "Euclidean in standardized input space; scipy cKDTree p=2, workers=1",
+  "neighbor_ties": "returned neighbors sorted by (distance, training row index); cKDTree deterministic for fixed ordered data",
+  "weights": "normalized inverse distance, sum to one",
+  "exact_zero_rule": "both methods average exact-match neighbors among the same k and ignore other neighbors; no ridge fit in this case",
+  "local_linear_objective": "sum_i w_i ||a+B(x_i-x_query)-y_i||^2 + 1e-3 ||B||_F^2; intercept unpenalized",
+  "solver": "numpy.linalg.lstsq on augmented sqrt-weighted design, no explicit matrix inverse",
+  "output_units": "V",
+  "output_transformations": [],
+  "metric_api": "official metrics.score(..., fields=['potential'], percent=True) and metrics.relative_l2",
+  "denominator_floor": 1e-30,
+  "timing_scope": "single end-to-end call per method, input transformation + neighbor search + weighting/local fits; excludes shared training/scoring/I/O; no timing repetitions or tuning",
+  "thread_count": 1,
+  "example_key": {
+    "source_dataset": "core/spt100_gbohm_12k_nc3_s42_20260617.h5",
+    "run_id": 32
+  },
+  "example_rule": "first validation key in sorted composite-key order",
+  "limitation": "Random validation holdout does not establish performance inside missing regions; reserve D5 test for stage two"
+}

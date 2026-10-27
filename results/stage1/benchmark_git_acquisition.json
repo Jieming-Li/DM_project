@@ -1,0 +1,18 @@
+[
+  {
+    "argv": [
+      "git",
+      "clone",
+      "--depth",
+      "1",
+      "--branch",
+      "v1.0.0",
+      "https://github.com/gangryk/hallthruster-surrogate-benchmark.git",
+      "/home/jimmy/Desktop/DM_project/.tmp/benchmark_git_v1.0.0"
+    ],
+    "cwd": "/home/jimmy/Desktop/DM_project",
+    "exit_status": 0,
+    "stdout": "",
+    "stderr": "Cloning into '/home/jimmy/Desktop/DM_project/.tmp/benchmark_git_v1.0.0'...\nNote: switching to '30d45b23b4fc444b95490a7d161d0f102da212e7'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\n"
+  }
+]
